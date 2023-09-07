@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648207201871",
+    "project_id": "smartsocket-thesis",
+    "storage_bucket": "smartsocket-thesis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648207201871:android:157b42a6ad4a09dc06dc3a",
+        "android_client_info": {
+          "package_name": "com.graduate.smartsocket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648207201871-1nb4puihj8gdvjgluu8e3j1j1ct48eam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA63-WGsXRJKT3ididiQOBMETy8T1tW3qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648207201871-1nb4puihj8gdvjgluu8e3j1j1ct48eam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

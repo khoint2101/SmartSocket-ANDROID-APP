@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_white_conner_16dp"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="NHẬP DEVICE ID"
+        android:textColor="@color/light_yellow"
+        android:textSize="20sp"
+        android:background="@drawable/bg_conner_top_left_right"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhập ID trên ổ cắm vào bên dưới"
+            android:gravity="center"
+            android:textSize="18sp">
+        </TextView>
+        <EditText
+            android:id="@+id/edit_id_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_boder_conner_10_blue"
+            android:hint="Xuất hiện ở màn hình TFT"
+            android:layout_marginTop="16dp">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_id_dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:layout_marginRight="8dp"
+            android:text="HUỶ"
+            android:alpha="0.8"
+            android:textSize="14sp"
+            app:cornerRadius="10sp">
+        </com.google.android.material.button.MaterialButton>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_id_dialog_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/cerulean_blue"
+            android:layout_marginRight="8dp"
+            android:text="ĐỒNG Ý"
+            android:alpha="0.8"
+            android:textSize="14sp"
+            app:cornerRadius="10sp">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+</LinearLayout>

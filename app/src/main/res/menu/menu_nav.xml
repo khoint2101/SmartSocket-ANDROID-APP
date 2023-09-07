@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dash"
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard_icon"/>
+        <item android:id="@+id/nav_ctrl"
+            android:title="Bảng điều khiển"
+            android:icon="@drawable/controlpanel_icon"/>
+        <item  android:id="@+id/nav_calcElec"
+            android:title="Tính tiền điện"
+            android:icon="@drawable/calc_icon"/>
+    </group>
+    <item android:title="Tài khoản">
+        <menu>
+            <item android:id="@+id/nav_profile"
+                android:title="Thông tin"
+                android:icon="@drawable/infor_icon"/>
+            <item  android:id="@+id/nav_password"
+                android:title="Đổi mật khẩu"
+                android:icon="@drawable/passchange_icon"/>
+            <item android:id="@+id/nav_signout"
+                android:title="Đăng xuất"
+                android:icon="@drawable/logout_icon"/>
+        </menu>
+    </item>
+
+
+</menu>

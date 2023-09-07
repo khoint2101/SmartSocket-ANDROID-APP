@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".Splash">
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="300dp"
+        android:src="@drawable/smart_socket_icon">
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đồ án tốt nghiệp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:textColor="@color/bittersweet"
+        android:layout_marginTop="15dp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAllCaps="true"
+        android:textColor="@color/cerulean_blue"
+        android:layout_marginTop="15dp"
+        ></TextView>
+</LinearLayout>

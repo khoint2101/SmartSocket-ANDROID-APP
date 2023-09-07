@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ổ cắm thông minh</string>
+    <string name="nav_open">Open navigation drawer</string>
+    <string name="nav_close">Close navigation drawer</string>
+    <string name="author_name">Developed by NTKhoi based on templates</string>
+    <string name="example_mail">abc123@gmail.com</string>
+    <string name="control_header">BẢNG ĐIỀU KHIỂN</string>
+    <string name="serverRealtimeDB">https://smartsocket-thesis-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</resources>
