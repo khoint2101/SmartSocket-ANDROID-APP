@@ -34,7 +34,7 @@ public class Dashboard extends Fragment {
     private TextView voltage, current, power, frequency, energy, powerFactor;
     public TextView yourDeviceID, wifiInfo;
     private Float F_voltage, F_current, F_power, F_freq, F_pf, F_energy;
-    public String deviceID = "0", cur_deviceId="null";
+    public String deviceID = "0", cur_deviceId="null", S_wifiInfo;
     private Boolean state = false;
 
     @Nullable
@@ -72,7 +72,9 @@ public class Dashboard extends Fragment {
         btnDelete.setOnClickListener(new View.OnClickListener() {   // nut xoa thong so dien
             @Override
             public void onClick(View view) {
-
+                FirebaseDatabase database = FirebaseDatabase.getInstance("https://smartsocket-thesis-default-rtdb.asia-southeast1.firebasedatabase.app");
+                DatabaseReference del_state = database.getReference(cur_deviceId + "/control/del_state");
+                del_state.setValue(10);
             }
         });
 
@@ -99,13 +101,18 @@ public class Dashboard extends Fragment {
                 // tham so
                 DatabaseReference volt = database.getReference(cur_deviceId + "/dashboard/voltage");
                 DatabaseReference curr = database.getReference(cur_deviceId+ "/dashboard/current");
+                DatabaseReference pow = database.getReference(cur_deviceId + "/dashboard/power");
+                DatabaseReference ener = database.getReference(cur_deviceId + "/dashboard/energy");
+                DatabaseReference freq = database.getReference(cur_deviceId + "/dashboard/frequency");
+                DatabaseReference powF = database.getReference(cur_deviceId + "/dashboard/pf");
+                DatabaseReference WiFiIn4 = database.getReference(cur_deviceId + "/dashboard/wifiinfo");
 
                 // xu ly
                 volt.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange( DataSnapshot snapshot) {
                         F_voltage = snapshot.getValue(Float.class);
-                        voltage.setText(String.valueOf(F_voltage).replace('.',',')+ "V");
+                        voltage.setText(String.valueOf(F_voltage).replace('.',',')+ " V");
                     }
 
                     @Override
@@ -117,7 +124,65 @@ public class Dashboard extends Fragment {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         F_current = snapshot.getValue(Float.class);
-                        current.setText(String.valueOf(F_current).replace('.',',')+"A");
+                        current.setText(String.valueOf(F_current).replace('.',',')+" A");
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                pow.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        F_power = snapshot.getValue(Float.class);
+                        power.setText(String.valueOf(F_power).replace('.',',')+ " W");
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                ener.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        F_energy = snapshot.getValue(Float.class);
+                        energy.setText(String.valueOf(F_energy).replace('.',',')+ " kWh");
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                freq.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        F_freq = snapshot.getValue(Float.class);
+                        frequency.setText(String.valueOf(F_freq).replace('.',',') + " Hz");
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                powF.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        F_pf = snapshot.getValue(Float.class);
+                        powerFactor.setText(String.valueOf(F_pf).replace('.',','));
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                WiFiIn4.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        S_wifiInfo = snapshot.getValue(String.class);
+                        wifiInfo.setText(S_wifiInfo);
                     }
 
                     @Override

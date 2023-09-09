@@ -18,6 +18,15 @@ public class ControlPanel extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         mView = inflater.inflate(R.layout.control_fragment, container, false);
+
         return mView;
+    }
+
+    private void InitUI(){
+
+    }
+
+    private void InitListener(){
+        
     }
 }
