@@ -180,7 +180,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
     }
-
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == MY_REQUEST_CODE) {
+//            if (resultCode == RESULT_OK) {
+//                // Xử lý kết quả trả về ở đây
+//                Uri selectedImg = data.getData();
+//                mProfile.setUri(selectedImg);
+//                // Thực hiện các thao tác với đường dẫn hình ảnh được chọn
+//            } else if (resultCode == RESULT_CANCELED) {
+//                // Xử lý trường hợp người dùng đã hủy thao tác
+//            }
+//        }
+//    }
     public void OpenGallery(){
         Intent intent = new Intent();
         intent.setType("image/*");

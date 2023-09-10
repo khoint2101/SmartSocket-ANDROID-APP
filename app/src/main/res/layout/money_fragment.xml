@@ -10,8 +10,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tính tiền điện"
-        android:textSize="50sp"
+        android:text="TIỀN ĐIỆN THỐNG KÊ TỪ Ổ CẮM"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:textColor="@color/cerulean_blue"
         android:gravity="center"/>
     <com.google.android.material.textfield.TextInputLayout
@@ -124,7 +125,6 @@
         android:layout_marginTop="10dp"
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="1dp">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/elec_price_lv5"
             android:layout_width="match_parent"
@@ -132,6 +132,25 @@
             android:hint="Giá điện / kWh (Bậc 5)"
             android:inputType="number"
             android:imeOptions="actionNext"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        android:layout_marginTop="10dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="1dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/elec_price_lv6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Giá điện / kWh (Bậc 6)"
+            android:inputType="number"
+            android:imeOptions="actionDone"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_cal"
@@ -143,6 +162,7 @@
         android:textSize="30dp"
         android:textColor="@color/white"
         app:cornerRadius="25dp"></com.google.android.material.button.MaterialButton>
+
     <TextView
         android:id="@+id/tv_total"
         android:layout_marginTop="10dp"
@@ -151,4 +171,25 @@
         android:gravity="center"
         android:text="Tổng cộng:"
         android:textSize="30dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <TextView
+            android:id="@+id/price_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Xem bảng giá điện sinh hoạt tại đây"
+            android:textSize="16dp"
+            android:textColor="@color/green"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green"
+            />
+    </LinearLayout>
 </LinearLayout>
