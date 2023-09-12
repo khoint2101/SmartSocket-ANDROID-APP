@@ -44,7 +44,7 @@
                     android:id="@+id/state_socket1_img"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_socket_on"
+                    android:src="@drawable/ic_socket_off"
                     android:layout_marginBottom="100dp"
                     />
 
@@ -68,7 +68,7 @@
                     android:id="@+id/state_socket2_img"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_socket_on"
+                    android:src="@drawable/ic_socket_off"
                     android:layout_marginBottom="100dp"
                     />
 
@@ -92,7 +92,7 @@
                     android:id="@+id/state_socket3_img"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_socket_on"
+                    android:src="@drawable/ic_socket_off"
                     android:layout_marginBottom="100dp"
                     />
             </LinearLayout>

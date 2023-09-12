@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,7 +35,7 @@ public class Money extends Fragment {
     private EditText energy, elec_price_lv1, elec_price_lv2, elec_price_lv3, elec_price_lv4, elec_price_lv5,elec_price_lv6;
     private Integer price_lv1, price_lv2, price_lv3, price_lv4, price_lv5, price_lv6;
     private Button btnCalc;
-    public String cur_device_Id;
+    public String cur_device_Id = "null";
 
     @Nullable
     @Override
@@ -74,8 +75,14 @@ public class Money extends Fragment {
                 myRefEnergy.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        Float ener_value = snapshot.getValue(Float.class);
-                        energy.setText(ener_value.toString(ener_value));
+                        if (snapshot.exists()){
+                            Float ener_value = snapshot.getValue(Float.class);
+                            energy.setText(ener_value.toString(ener_value));
+                        }else {
+                            Toast.makeText(getActivity(),"Nhận dữ liệu thất bại, kiểm tra lại ID thiết bị",Toast.LENGTH_SHORT).show();
+                            energy.setText("0");
+                        }
+
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
