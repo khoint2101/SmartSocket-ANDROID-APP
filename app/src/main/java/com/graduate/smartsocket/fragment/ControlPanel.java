@@ -656,7 +656,7 @@ public class ControlPanel extends Fragment {
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(getActivity(),"Get Data Failed",Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getActivity(),"Get Data Failed",Toast.LENGTH_SHORT).show();
                     }
                 });
                 stt_pwrAlert.addValueEventListener(new ValueEventListener() {
