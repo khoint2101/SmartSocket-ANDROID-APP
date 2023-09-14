@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_socket_off"
-                    android:layout_marginBottom="100dp"
+                    android:layout_marginBottom="50dp"
                     />
 
             </LinearLayout>
@@ -69,7 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_socket_off"
-                    android:layout_marginBottom="100dp"
+                    android:layout_marginBottom="50dp"
                     />
 
             </LinearLayout>
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_socket_off"
-                    android:layout_marginBottom="100dp"
+                    android:layout_marginBottom="50dp"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -221,6 +221,15 @@
                     android:hint="Chọn thời gian"
                     android:focusable="false"
                     />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/enable_timer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="OFF/ON"
+                    android:checked="false"
+                    android:padding="12dp"
+                    ></androidx.appcompat.widget.SwitchCompat>
 
             </LinearLayout>
             <LinearLayout
@@ -246,6 +255,15 @@
                     android:hint="Chọn thời gian"
                     android:focusable="false"
                     />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/enable_timer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="OFF/ON"
+                    android:checked="false"
+                    android:padding="12dp"
+                    ></androidx.appcompat.widget.SwitchCompat>
 
             </LinearLayout>
             <LinearLayout
@@ -271,6 +289,15 @@
                     android:focusable="false"
                     android:gravity="center"
                     android:hint="Chọn thời gian" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/enable_timer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="OFF/ON"
+                    android:checked="false"
+                    android:padding="12dp"
+                    ></androidx.appcompat.widget.SwitchCompat>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -295,10 +322,19 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center">
-                <NumberPicker
-                    android:id="@+id/num_pwr_alarm_picker"
-                    android:layout_width="100dp"
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/enable_alert_pwr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:text="OFF/ON  "/>
+                <EditText
+                    android:id="@+id/num_pwr_alarm_input"
+                    android:layout_width="wrap_content"
                     android:layout_height="69dp"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="Nhập công suất"
                     />
                 <TextView
                     android:layout_width="100dp"

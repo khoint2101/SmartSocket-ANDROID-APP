@@ -74,7 +74,19 @@ public class Dashboard extends Fragment {
             public void onClick(View view) {
                 FirebaseDatabase database = FirebaseDatabase.getInstance("https://smartsocket-thesis-default-rtdb.asia-southeast1.firebasedatabase.app");
                 DatabaseReference del_state = database.getReference(cur_deviceId + "/control/del_state");
-                del_state.setValue(10);
+                del_state.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()){
+                            del_state.setValue(10);
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
             }
         });
 
